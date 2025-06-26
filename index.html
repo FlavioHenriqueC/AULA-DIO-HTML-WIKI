@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Enciclopédia Simples</title>
+    <style>
+        /* CSS super simples para organizar */
+        body {
+            font-family: sans-serif; /* Fonte genérica e legível */
+            line-height: 1.5; /* Espaçamento entre linhas */
+            max-width: 960px; /* Largura máxima para não ficar muito largo */
+            margin: 20px auto; /* Centraliza a página e dá um respiro */
+            padding: 0 15px; /* Padding nas laterais para não grudar na borda */
+        }
+
+        header, nav, main, footer {
+            margin-bottom: 20px; /* Espaço entre as grandes seções */
+        }
+
+        header {
+            text-align: center; /* Centraliza o título */
+            padding-bottom: 10px; /* Um pequeno espaço abaixo do título */
+            border-bottom: 1px solid #ccc; /* Linha sutil para separar */
+        }
+
+        nav ul {
+            list-style: none; /* Remove bolinhas da lista */
+            padding: 0;
+            display: flex; /* Coloca os itens da navegação lado a lado */
+            justify-content: center; /* Centraliza os itens */
+            gap: 20px; /* Espaço entre os itens da navegação */
+        }
+
+        nav a {
+            text-decoration: none; /* Remove o sublinhado padrão do link */
+            color: blue; /* Cor de link padrão */
+        }
+
+        nav a:hover {
+            text-decoration: underline; /* Sublinha ao passar o mouse */
+        }
+
+        main {
+            display: flex; /* Layout em colunas para artigo e barra lateral */
+            gap: 30px; /* Espaço entre as colunas */
+        }
+
+        article {
+            flex: 3; /* Artigo ocupa 3 partes */
+        }
+
+        aside {
+            flex: 1; /* Barra lateral ocupa 1 parte */
+            padding-left: 20px; /* Espaçamento à esquerda para separar do artigo */
+            border-left: 1px solid #eee; /* Uma linha sutil separando a barra lateral */
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9em; /* Texto do rodapé um pouco menor */
+            color: #666; /* Cor mais suave para o texto do rodapé */
+            border-top: 1px solid #eee; /* Linha sutil para separar */
+            padding-top: 10px; /* Espaço acima do texto do rodapé */
+        }
+
+        /* Imagem flutuante dentro do artigo */
+        article figure {
+            float: right;
+            margin: 0 0 1em 1em; /* Margem para separar a imagem do texto */
+        }
+
+        /* Lista de referências */
+        article ol {
+            list-style-type: decimal; /* Números para a lista ordenada */
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Enciclopédia Simples</h1>
+        <p>Apenas informações, sem complicação.</p>
+    </header>
+
+    <nav aria-label="Navegação principal do site">
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre este site</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article id="inicio">
+            <h2>O Que É HTML?</h2>
+            <p><strong>HTML</strong> (HyperText Markup Language) é a linguagem de marcação padrão para a criação de páginas web. É a espinha dorsal de qualquer site que você visita, fornecendo a estrutura e o conteúdo.</p>
+
+            <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="Logo do HTML" width="120">
+                <figcaption>Logo do HTML5</figcaption>
+            </figure>
+
+            <h3>Como Funciona</h3>
+            <p>O HTML usa "tags" (marcadores) para definir diferentes partes de uma página. Por exemplo, <code>&lt;p&gt;</code> define um parágrafo e <code>&lt;h1&gt;</code> define um título principal.</p>
+
+            <h3>Importância</h3>
+            <p>Sem HTML, não teríamos a estrutura para colocar texto, imagens e vídeos na internet. Ele trabalha junto com CSS (para estilo) e JavaScript (para interatividade).</p>
+
+            <section aria-labelledby="curiosidades-titulo">
+                <h3 id="curiosidades-titulo">Curiosidades</h3>
+                <ul>
+                    <li>É uma linguagem de marcação, não de programação.</li>
+                    <li>Sua última versão é o HTML5.</li>
+                    <li>Ele permite incorporar mídia como áudio e vídeo diretamente.</li>
+                </ul>
+            </section>
+        </article>
+
+        <aside aria-label="Conteúdo relacionado">
+            <h3>Links Rápidos</h3>
+            <ul>
+                <li><a href="#historia">História do HTML</a></li>
+                <li><a href="#elementos">Principais Elementos</a></li>
+                <li><a href="#multimidia">Mídia no HTML</a></li>
+            </ul>
+
+            <h3>Tópicos Relacionados</h3>
+            <ul>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">Desenvolvimento Web</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Conteúdo baseado em informações públicas.</p>
+        <p>&copy; 2025 Flávio Henrique Cabral Da Silva</p>
+        <nav aria-label="Links do rodapé">
+            <ul>
+                <li><a href="#">Privacidade</a></li>
+                <li><a href="#">Termos</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
